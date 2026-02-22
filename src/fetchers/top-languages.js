@@ -69,7 +69,7 @@ const fetchTopLanguages = async (
     throw new MissingParamError(["username"]);
   }
 
-  const res = await retryer(fetcher, { login: username },process.env.PAT_1);
+  const res = await retryer(fetcher, { login: username });
 
   if (res.data.errors) {
     logger.error(res.data.errors);
